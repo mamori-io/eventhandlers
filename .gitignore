@@ -1,0 +1,45 @@
+# Compiled source #
+###################
+*.class
+*.classpath
+*.dll
+*.exe
+*.o
+*.so
+*.bak
+*.project
+**/.settings
+**/.idea
+**/*.iml
+**/*~
+.#*
+*.tbz
+*.tgz
+*.jar
+.git-
+.parcel-cache
+**/node_modules
+**/generated
+.flattened-pom.xml
+
+### Output directories to ignore
+**/classes
+**/target
+
+# Backup files
+##############
+**/#*
+
+# OS generated files #
+######################
+.DS_Store
+.DS_Store?
+**/.DS_Store
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+/.project
+/tmp/*
+
