@@ -3,7 +3,7 @@ var path = request.getPath();
 // LOGGER.info("path = " + path);
 if(path == '/') {
   return response.rewriteResponse(function(body) {
-    var result = body.replace(/<\/title>/, ' - protected by Mamori</title>').replace(/<\/html>/, '<script type="text/javascript">(function() { var t=window.setInterval(function() { var e=document.getElementsByName("username"); if(e.length == 1) { e[0].value = "' + username + '"; document.getElementsByName("password")[0].value="mamorimanagedpassword"; window.clearInterval(t) }})})()</script></html>');
+      var result = body.replace(/<\/title>/, ' - protected by Mamori</title>').replace(/<\/html>/, '<script type="text/javascript">(function() { var t=window.setInterval(function() { var e=document.getElementsByName("username"); if(e.length == 1) { e[0].value = "' + username + '"; document.getElementsByName("password")[0].value="mamorimanagedpassword"; window.clearInterval(t) }}, 100)})()</script></html>');
 	return result;
   });
 } else if(path == '/api2/extjs/access/ticket') {
