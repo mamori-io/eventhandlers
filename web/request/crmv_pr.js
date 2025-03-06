@@ -28,7 +28,7 @@ if(path.match(/^\/sip\/login\.php\?.*/)) {
     }
   } else {
     return response.rewriteResponse(function(body) {
-	var result = body.replace(/<\/title>/, ' - protected by Mamori</title>').replace(/<\/html>/, '<script type="text/javascript">(function() { var t=window.setInterval(function() { var e=document.getElementsByName("txtUsuario"); if(e.length == 1) { e[0].value = "' + username + '"; document.getElementsByName("pwdSenha")[0].value="mamorimanagedpassword"; window.clearInterval(t) }}, 100)})()</script></html>');
+      var result = body.replace(/<\/title>/, ' - protected by Mamori</title>').replace(/<\/body>/, '<script type="text/javascript">(function() { var t=window.setInterval(function() { var e=document.getElementsByName("txtUsuario"); if(e.length == 1) { e[0].value = "' + username + '"; document.getElementsByName("pwdSenha")[0].value="mamorimanagedpassword"; window.clearInterval(t) }}, 100)})()</script></body>');
 	  return result;
     });
   }
