@@ -13,7 +13,7 @@ if(path == "/login") {
       var body = request.getBodyText();
       var parts = body.split("&");
       var sawPassword = false;
-      for(var i; i<parts.length; i++) {
+      for(var i=0; i<parts.length; i++) {
         if(parts[i].startsWith("username=")) {
           parts[i] = "username=" + encodeURIComponent(cred.getLogin());
         } else if(parts[i].startsWith("password=")) {
