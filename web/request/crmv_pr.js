@@ -9,7 +9,7 @@ if(path.match(/^\/sip\/login\.php\?.*/)) {
       var body = request.getBodyText();
       var parts = body.split("&");
       var sawPassword = false;
-      for(var i; i<parts.length; i++) {
+      for(var i=0; i<parts.length; i++) {
         if(parts[i].startsWith("txtUsuario=")) {
           parts[i] = "txtUsuario=" + encodeURIComponent(cred.getLogin());
         } else if(parts[i].startsWith("pwdSenha=")) {
